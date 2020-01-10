@@ -40,7 +40,7 @@ export class Pipeline extends Construct {
             commands: [
               'env', // TODO: remove after debugging
               'npm run build',
-              './node_modules/.bin/cdk synth'
+              './node_modules/.bin/cdk synth --role-arn ' + props.serviceRole
             ],
           },
         },
