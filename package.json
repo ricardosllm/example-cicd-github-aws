@@ -19,6 +19,9 @@
   "dependencies": {
     "@aws-cdk/aws-certificatemanager": "*",
     "@aws-cdk/aws-cloudfront": "*",
+    "@aws-cdk/aws-codebuild": "*",
+    "@aws-cdk/aws-codepipeline": "*",
+    "@aws-cdk/aws-codepipeline-actions": "*",
     "@aws-cdk/aws-iam": "*",
     "@aws-cdk/aws-route53": "*",
     "@aws-cdk/aws-route53-targets": "*",

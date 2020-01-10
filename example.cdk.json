@@ -1,0 +1,7 @@
+{
+  "app": "node index",
+  "context": {
+    "domain": "mystaticsite.com",
+    "subdomain": "www"
+  }
+}
