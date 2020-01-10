@@ -3,6 +3,7 @@ import cdk = require('@aws-cdk/core');
 import codebuild = require('@aws-cdk/aws-codebuild');
 import codepipeline = require('@aws-cdk/aws-codepipeline');
 import codepipeline_actions = require('@aws-cdk/aws-codepipeline-actions');
+import iam = require('@aws-cdk/aws-iam');
 import { Construct } from '@aws-cdk/core';
 // import { App, Stack, StackProps } from '@aws-cdk/core';
 
@@ -28,19 +29,20 @@ export class Pipeline extends Construct {
       trigger: codepipeline_actions.GitHubTrigger.WEBHOOK
     });
 
+    const cdkRole = iam.Role.fromRoleArn(this, 'cdkRole', props.serviceRole);
+
     const cdkBuild = new codebuild.PipelineProject(this, 'CdkBuild', {
+      role: cdkRole,
       buildSpec: codebuild.BuildSpec.fromObject({
         version: '0.2',
-        role: props.serviceRole,
         phases: {
           install: {
             commands: 'npm install',
           },
           build: {
             commands: [
-              'env', // TODO: remove after debugging
               'npm run build',
-              './node_modules/.bin/cdk synth --role-arn ' + props.serviceRole
+              './node_modules/.bin/cdk synth'
             ],
           },
         },
@@ -67,7 +69,6 @@ export class Pipeline extends Construct {
     const SiteBuild = new codebuild.PipelineProject(this, 'SiteBuild', {
       buildSpec: codebuild.BuildSpec.fromObject({
         version: '0.2',
-        role: props.serviceRole,
         phases: {
           install: {
             commands: [

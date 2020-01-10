@@ -29,18 +29,55 @@ The domain for the static site (i.e. mystaticsite.com) must be configured as a h
 
 ## Setup
 
+### Install Depenedencies
+
 ```
 npm install -g aws-cdk
 npm install
 ```
 
-### Build
+### Create AWS Service Role
+
+You need to create a service role that both `cloudformation` and `codebuild` 
+can use in the pipeline's build and deploy actions
+
+In the IAM console create a service role, make sure to add only the required
+IAM permissions and to add trust relantionsships to both `cloudformation` 
+and `codebuild`. 
+
+Here's an example for the trust relationship policy:
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "cloudformation.amazonaws.com"
+      },
+      "Action": "sts:AssumeRole"
+    },
+    {
+      "Sid": "",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "codebuild.amazonaws.com"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+```
+
+## Build
 
 ```
 npm run build
 ```
 
-### Deploy
+## Deploy
 
 ```
 env AWS_ACCOUNT_ID=<your aws account_id> \
