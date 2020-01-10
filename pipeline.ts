@@ -36,6 +36,7 @@ export class Pipeline extends Construct {
           },
           build: {
             commands: [
+              'env', // TODO: remove after debugging
               'npm run build',
               './node_modules/.bin/cdk synth'
             ],
