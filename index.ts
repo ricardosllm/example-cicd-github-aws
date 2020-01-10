@@ -34,7 +34,8 @@ class PipelineStack extends cdk.Stack {
 
     new Pipeline(this, 'Pipeline', {
       sourceToken: 'github-token-ricardosllm',
-      cfnTemplate: 'MyStaticSite.template.json'
+      cfnTemplate: 'MyStaticSite.template.json',
+      serviceRole: 'arn:aws:iam::191560372108:role/ServiceRoleCloudFormationAdminAccess'
     });
   }
 }

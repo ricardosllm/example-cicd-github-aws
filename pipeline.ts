@@ -9,6 +9,7 @@ import { Construct } from '@aws-cdk/core';
 export interface PipelineProps {
   sourceToken: string;
   cfnTemplate: string;
+  serviceRole: string;
 }
 
 export class Pipeline extends Construct {
@@ -30,6 +31,7 @@ export class Pipeline extends Construct {
     const cdkBuild = new codebuild.PipelineProject(this, 'CdkBuild', {
       buildSpec: codebuild.BuildSpec.fromObject({
         version: '0.2',
+        role: props.serviceRole,
         phases: {
           install: {
             commands: 'npm install',
@@ -65,6 +67,7 @@ export class Pipeline extends Construct {
     const SiteBuild = new codebuild.PipelineProject(this, 'SiteBuild', {
       buildSpec: codebuild.BuildSpec.fromObject({
         version: '0.2',
+        role: props.serviceRole,
         phases: {
           install: {
             commands: [
