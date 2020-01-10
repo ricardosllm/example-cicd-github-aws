@@ -32,7 +32,10 @@ export class Pipeline extends Construct {
         version: '0.2',
         phases: {
           install: {
-            commands: 'npm install',
+            commands: [
+              'npm install',
+              'npm install -g aws-cdk'
+            ],
           },
           build: {
             commands: [
