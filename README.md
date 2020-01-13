@@ -32,7 +32,6 @@ The domain for the static site (i.e. mystaticsite.com) must be configured as a h
 ### Install Depenedencies
 
 ```
-npm install -g aws-cdk
 npm install
 ```
 
@@ -80,12 +79,10 @@ npm run build
 ## Deploy
 
 ```
-env AWS_ACCOUNT_ID=<your aws account_id> \
-cdk deploy \
--c domain=mystaticsite.com \
--c subdomain=www \
---profile <your_aws_profile>
+./node_modules/.bin/cdk deploy --profile <your_aws_profile>
 ```
+
+> Optionally provide which stack to deploy
 
 ---
 

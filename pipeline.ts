@@ -42,14 +42,18 @@ export class Pipeline extends Construct {
           build: {
             commands: [
               'npm run build',
-              './node_modules/.bin/cdk synth'
+              './node_modules/.bin/cdk synth -o dist',
+              './node_modules/.bin/cdk deploy MyStaticSite'
             ],
           },
         },
         artifacts: {
-          'base-directory': 'cdk.out',
+          // 'base-directory': 'cdk.out',
+          'base-directory': 'dist',
           files: [
-            props.cfnTemplate,
+            // '*'
+            // props.cfnTemplate,
+            'MyStaticSite.template.json',
           ],
         },
       }),
@@ -101,7 +105,7 @@ export class Pipeline extends Construct {
 
     const deployAction = new codepipeline_actions.CloudFormationCreateUpdateStackAction({
       actionName: 'Site_CFN_Deploy',
-      templatePath: cdkBuildOutput.atPath(props.cfnTemplate),
+      templatePath: cdkBuildOutput.atPath('MyStaticSite.template.json'),
       stackName: 'SiteDeploymentStack',
       adminPermissions: true,
       extraInputs: [siteBuildOutput],
