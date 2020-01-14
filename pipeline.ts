@@ -19,7 +19,7 @@ export class Pipeline extends Construct {
 
     const sourceOutput = new codepipeline.Artifact();
     const sourceAction = new codepipeline_actions.GitHubSourceAction({
-      actionName: 'GitHub_Source',
+      actionName: 'Get_Source',
       owner: 'ricardosllm',
       repo: 'example-cicd-github-aws',
       oauthToken: cdk.SecretValue.secretsManager(props.sourceToken),
@@ -31,7 +31,7 @@ export class Pipeline extends Construct {
 
     const cdkRole = iam.Role.fromRoleArn(this, 'cdkRole', props.serviceRole);
 
-    const cdkBuild = new codebuild.PipelineProject(this, 'CdkBuild', {
+    const cdkBuildDeploy = new codebuild.PipelineProject(this, 'CdkBuild', {
       role: cdkRole,
       buildSpec: codebuild.BuildSpec.fromObject({
         version: '0.2',
@@ -58,46 +58,12 @@ export class Pipeline extends Construct {
         buildImage: codebuild.LinuxBuildImage.UBUNTU_14_04_NODEJS_10_14_1,
       },
     });
-    const cdkBuildOutput = new codepipeline.Artifact('CdkBuildOutput');
-    const cdkBuildAction = new codepipeline_actions.CodeBuildAction({
-      actionName: 'CDK_Build',
-      project: cdkBuild,
+    const cdkBuildDeployOutput = new codepipeline.Artifact('CdkBuildOutput');
+    const cdkBuildDeployAction = new codepipeline_actions.CodeBuildAction({
+      actionName: 'Build_and_Deploy',
+      project: cdkBuildDeploy,
       input: sourceOutput,
-      outputs: [cdkBuildOutput],
-    });
-
-    // Not doing anything atm as there's nothing to build from the static site. TODO
-    const SiteBuild = new codebuild.PipelineProject(this, 'SiteBuild', {
-      buildSpec: codebuild.BuildSpec.fromObject({
-        version: '0.2',
-        phases: {
-          install: {
-            commands: [
-              'cd site-contents',
-            ],
-          },
-          build: {
-            commands: 'echo "Nothing to do here..."', // TODO: examplify site building
-          },
-        },
-        artifacts: {
-          'base-directory': 'site-contents',
-          files: [
-            'index.html',
-            'error.html',
-          ],
-        },
-      }),
-      environment: {
-        buildImage: codebuild.LinuxBuildImage.UBUNTU_14_04_NODEJS_10_14_1,
-      },
-    });
-    const siteBuildOutput = new codepipeline.Artifact('SiteBuildOutput');
-    const siteBuildAction = new codepipeline_actions.CodeBuildAction({
-      actionName: 'Site_Build',
-      project: SiteBuild,
-      input: sourceOutput,
-      outputs: [siteBuildOutput],
+      outputs: [cdkBuildDeployOutput],
     });
 
     new codepipeline.Pipeline(this, 'Pipeline', {
@@ -108,7 +74,7 @@ export class Pipeline extends Construct {
         },
         {
           stageName: 'Build',
-          actions: [ cdkBuildAction, siteBuildAction ],
+          actions: [ cdkBuildDeployAction ],
         },
       ],
     });
