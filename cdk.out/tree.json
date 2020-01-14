@@ -453,21 +453,21 @@
                   }
                 }
               },
-              "97e1208cef3a29881f27e3aa6a8b338fd628ce67b3d606f34d1d5e555c68ae1b": {
-                "id": "97e1208cef3a29881f27e3aa6a8b338fd628ce67b3d606f34d1d5e555c68ae1b",
-                "path": "MyStaticSite/AssetParameters/97e1208cef3a29881f27e3aa6a8b338fd628ce67b3d606f34d1d5e555c68ae1b",
+              "db6f9bc3558539a0fdae73c52715b556be6335094194b9a27db770920aa1291a": {
+                "id": "db6f9bc3558539a0fdae73c52715b556be6335094194b9a27db770920aa1291a",
+                "path": "MyStaticSite/AssetParameters/db6f9bc3558539a0fdae73c52715b556be6335094194b9a27db770920aa1291a",
                 "children": {
                   "S3Bucket": {
                     "id": "S3Bucket",
-                    "path": "MyStaticSite/AssetParameters/97e1208cef3a29881f27e3aa6a8b338fd628ce67b3d606f34d1d5e555c68ae1b/S3Bucket"
+                    "path": "MyStaticSite/AssetParameters/db6f9bc3558539a0fdae73c52715b556be6335094194b9a27db770920aa1291a/S3Bucket"
                   },
                   "S3VersionKey": {
                     "id": "S3VersionKey",
-                    "path": "MyStaticSite/AssetParameters/97e1208cef3a29881f27e3aa6a8b338fd628ce67b3d606f34d1d5e555c68ae1b/S3VersionKey"
+                    "path": "MyStaticSite/AssetParameters/db6f9bc3558539a0fdae73c52715b556be6335094194b9a27db770920aa1291a/S3VersionKey"
                   },
                   "ArtifactHash": {
                     "id": "ArtifactHash",
-                    "path": "MyStaticSite/AssetParameters/97e1208cef3a29881f27e3aa6a8b338fd628ce67b3d606f34d1d5e555c68ae1b/ArtifactHash"
+                    "path": "MyStaticSite/AssetParameters/db6f9bc3558539a0fdae73c52715b556be6335094194b9a27db770920aa1291a/ArtifactHash"
                   }
                 }
               }
@@ -546,7 +546,7 @@
                                           },
                                           ":s3:::",
                                           {
-                                            "Ref": "AssetParameters97e1208cef3a29881f27e3aa6a8b338fd628ce67b3d606f34d1d5e555c68ae1bS3Bucket40E748D6"
+                                            "Ref": "AssetParametersdb6f9bc3558539a0fdae73c52715b556be6335094194b9a27db770920aa1291aS3BucketA0F670F2"
                                           }
                                         ]
                                       ]
@@ -561,7 +561,7 @@
                                           },
                                           ":s3:::",
                                           {
-                                            "Ref": "AssetParameters97e1208cef3a29881f27e3aa6a8b338fd628ce67b3d606f34d1d5e555c68ae1bS3Bucket40E748D6"
+                                            "Ref": "AssetParametersdb6f9bc3558539a0fdae73c52715b556be6335094194b9a27db770920aa1291aS3BucketA0F670F2"
                                           },
                                           "/*"
                                         ]
@@ -865,7 +865,7 @@
                         "serviceRole": "arn:aws:iam::191560372108:role/ServiceRoleCloudFormationAdminAccess",
                         "source": {
                           "type": "CODEPIPELINE",
-                          "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": \"npm install\"\n    },\n    \"build\": {\n      \"commands\": [\n        \"npm run build\",\n        \"./node_modules/.bin/cdk synth -o dist\",\n        \"./node_modules/.bin/cdk deploy MyStaticSite\"\n      ]\n    }\n  },\n  \"artifacts\": {\n    \"base-directory\": \"dist\",\n    \"files\": [\n      \"MyStaticSite.template.json\"\n    ]\n  }\n}"
+                          "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": \"npm install\"\n    },\n    \"build\": {\n      \"commands\": [\n        \"npm run build\",\n        \"./node_modules/.bin/cdk synth -o dist\",\n        \"./node_modules/.bin/cdk deploy MyStaticSite --require-approval never\",\n        \"./node_modules/.bin/cdk deploy PipelineMyStaticSite --require-approval never\"\n      ]\n    }\n  },\n  \"artifacts\": {\n    \"base-directory\": \"dist\",\n    \"files\": [\n      \"MyStaticSite.template.json\"\n    ]\n  }\n}"
                         },
                         "encryptionKey": {
                           "Fn::GetAtt": [

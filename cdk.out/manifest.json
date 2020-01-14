@@ -80,13 +80,13 @@
           {
             "type": "aws:cdk:asset",
             "data": {
-              "path": "asset.97e1208cef3a29881f27e3aa6a8b338fd628ce67b3d606f34d1d5e555c68ae1b",
-              "id": "97e1208cef3a29881f27e3aa6a8b338fd628ce67b3d606f34d1d5e555c68ae1b",
+              "path": "asset.db6f9bc3558539a0fdae73c52715b556be6335094194b9a27db770920aa1291a",
+              "id": "db6f9bc3558539a0fdae73c52715b556be6335094194b9a27db770920aa1291a",
               "packaging": "zip",
-              "sourceHash": "97e1208cef3a29881f27e3aa6a8b338fd628ce67b3d606f34d1d5e555c68ae1b",
-              "s3BucketParameter": "AssetParameters97e1208cef3a29881f27e3aa6a8b338fd628ce67b3d606f34d1d5e555c68ae1bS3Bucket40E748D6",
-              "s3KeyParameter": "AssetParameters97e1208cef3a29881f27e3aa6a8b338fd628ce67b3d606f34d1d5e555c68ae1bS3VersionKey273878F8",
-              "artifactHashParameter": "AssetParameters97e1208cef3a29881f27e3aa6a8b338fd628ce67b3d606f34d1d5e555c68ae1bArtifactHash7CE3B76B"
+              "sourceHash": "db6f9bc3558539a0fdae73c52715b556be6335094194b9a27db770920aa1291a",
+              "s3BucketParameter": "AssetParametersdb6f9bc3558539a0fdae73c52715b556be6335094194b9a27db770920aa1291aS3BucketA0F670F2",
+              "s3KeyParameter": "AssetParametersdb6f9bc3558539a0fdae73c52715b556be6335094194b9a27db770920aa1291aS3VersionKey8DDF55E7",
+              "artifactHashParameter": "AssetParametersdb6f9bc3558539a0fdae73c52715b556be6335094194b9a27db770920aa1291aArtifactHash4B0B93F6"
             },
             "trace": [
               "MyStaticSiteStack.addFileAsset (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/core/lib/stack.js:352:23)",
@@ -534,10 +534,10 @@
             ]
           }
         ],
-        "/MyStaticSite/AssetParameters/97e1208cef3a29881f27e3aa6a8b338fd628ce67b3d606f34d1d5e555c68ae1b/S3Bucket": [
+        "/MyStaticSite/AssetParameters/db6f9bc3558539a0fdae73c52715b556be6335094194b9a27db770920aa1291a/S3Bucket": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "AssetParameters97e1208cef3a29881f27e3aa6a8b338fd628ce67b3d606f34d1d5e555c68ae1bS3Bucket40E748D6",
+            "data": "AssetParametersdb6f9bc3558539a0fdae73c52715b556be6335094194b9a27db770920aa1291aS3BucketA0F670F2",
             "trace": [
               "new FileAssetParameters (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:11:36)",
               "MyStaticSiteStack.addFileAsset (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/core/lib/stack.js:342:22)",
@@ -560,10 +560,10 @@
             ]
           }
         ],
-        "/MyStaticSite/AssetParameters/97e1208cef3a29881f27e3aa6a8b338fd628ce67b3d606f34d1d5e555c68ae1b/S3VersionKey": [
+        "/MyStaticSite/AssetParameters/db6f9bc3558539a0fdae73c52715b556be6335094194b9a27db770920aa1291a/S3VersionKey": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "AssetParameters97e1208cef3a29881f27e3aa6a8b338fd628ce67b3d606f34d1d5e555c68ae1bS3VersionKey273878F8",
+            "data": "AssetParametersdb6f9bc3558539a0fdae73c52715b556be6335094194b9a27db770920aa1291aS3VersionKey8DDF55E7",
             "trace": [
               "new FileAssetParameters (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:15:35)",
               "MyStaticSiteStack.addFileAsset (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/core/lib/stack.js:342:22)",
@@ -586,10 +586,10 @@
             ]
           }
         ],
-        "/MyStaticSite/AssetParameters/97e1208cef3a29881f27e3aa6a8b338fd628ce67b3d606f34d1d5e555c68ae1b/ArtifactHash": [
+        "/MyStaticSite/AssetParameters/db6f9bc3558539a0fdae73c52715b556be6335094194b9a27db770920aa1291a/ArtifactHash": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "AssetParameters97e1208cef3a29881f27e3aa6a8b338fd628ce67b3d606f34d1d5e555c68ae1bArtifactHash7CE3B76B",
+            "data": "AssetParametersdb6f9bc3558539a0fdae73c52715b556be6335094194b9a27db770920aa1291aArtifactHash4B0B93F6",
             "trace": [
               "new FileAssetParameters (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:19:38)",
               "MyStaticSiteStack.addFileAsset (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/core/lib/stack.js:342:22)",
@@ -749,7 +749,7 @@
               "new Role (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-iam/lib/role.js:35:22)",
               "new Project (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-codebuild/lib/project.js:238:35)",
               "new PipelineProject (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-codebuild/lib/pipeline-project.js:11:9)",
-              "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/pipeline.js:63:27)",
+              "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/pipeline.js:64:27)",
               "new PipelineStack (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/index.js:32:9)",
               "Object.<anonymous> (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/index.js:42:1)",
               "Module._compile (internal/modules/cjs/loader.js:776:30)",
@@ -773,7 +773,7 @@
               "PipelineProject.addToRolePolicy (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-codebuild/lib/project.js:46:23)",
               "new Project (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-codebuild/lib/project.js:302:14)",
               "new PipelineProject (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-codebuild/lib/pipeline-project.js:11:9)",
-              "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/pipeline.js:63:27)",
+              "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/pipeline.js:64:27)",
               "new PipelineStack (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/index.js:32:9)",
               "Object.<anonymous> (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/index.js:42:1)",
               "Module._compile (internal/modules/cjs/loader.js:776:30)",
@@ -794,7 +794,7 @@
             "trace": [
               "new Project (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-codebuild/lib/project.js:275:26)",
               "new PipelineProject (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-codebuild/lib/pipeline-project.js:11:9)",
-              "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/pipeline.js:63:27)",
+              "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/pipeline.js:64:27)",
               "new PipelineStack (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/index.js:32:9)",
               "Object.<anonymous> (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/index.js:42:1)",
               "Module._compile (internal/modules/cjs/loader.js:776:30)",
@@ -815,7 +815,7 @@
             "trace": [
               "new Key (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-kms/lib/key.js:145:26)",
               "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:80:35)",
-              "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/pipeline.js:102:9)",
+              "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/pipeline.js:103:9)",
               "new PipelineStack (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/index.js:32:9)",
               "Object.<anonymous> (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/index.js:42:1)",
               "Module._compile (internal/modules/cjs/loader.js:776:30)",
@@ -836,7 +836,7 @@
             "trace": [
               "new Bucket (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-s3/lib/bucket.js:366:26)",
               "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:85:27)",
-              "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/pipeline.js:102:9)",
+              "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/pipeline.js:103:9)",
               "new PipelineStack (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/index.js:32:9)",
               "Object.<anonymous> (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/index.js:42:1)",
               "Module._compile (internal/modules/cjs/loader.js:776:30)",
@@ -857,7 +857,7 @@
             "trace": [
               "new Alias (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-kms/lib/alias.js:69:26)",
               "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:92:13)",
-              "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/pipeline.js:102:9)",
+              "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/pipeline.js:103:9)",
               "new PipelineStack (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/index.js:32:9)",
               "Object.<anonymous> (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/index.js:42:1)",
               "Module._compile (internal/modules/cjs/loader.js:776:30)",
@@ -878,7 +878,7 @@
             "trace": [
               "new Role (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-iam/lib/role.js:35:22)",
               "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:100:35)",
-              "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/pipeline.js:102:9)",
+              "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/pipeline.js:103:9)",
               "new PipelineStack (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/index.js:32:9)",
               "Object.<anonymous> (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/index.js:42:1)",
               "Module._compile (internal/modules/cjs/loader.js:776:30)",
@@ -904,7 +904,7 @@
               "Bucket.grant (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-s3/lib/bucket.js:275:29)",
               "Bucket.grantReadWrite (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-s3/lib/bucket.js:224:21)",
               "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:113:29)",
-              "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/pipeline.js:102:9)",
+              "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/pipeline.js:103:9)",
               "new PipelineStack (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/index.js:32:9)",
               "Object.<anonymous> (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/index.js:42:1)",
               "Module._compile (internal/modules/cjs/loader.js:776:30)",
@@ -924,7 +924,7 @@
             "data": "Pipeline9850B417",
             "trace": [
               "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:103:30)",
-              "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/pipeline.js:102:9)",
+              "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/pipeline.js:103:9)",
               "new PipelineStack (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/index.js:32:9)",
               "Object.<anonymous> (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/index.js:42:1)",
               "Module._compile (internal/modules/cjs/loader.js:776:30)",
@@ -951,7 +951,7 @@
               "new Stage (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-codepipeline/lib/stage.js:25:18)",
               "Pipeline.addStage (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:160:23)",
               "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:129:18)",
-              "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/pipeline.js:102:9)",
+              "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/pipeline.js:103:9)",
               "new PipelineStack (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/index.js:32:9)",
               "Object.<anonymous> (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/index.js:42:1)",
               "Module._compile (internal/modules/cjs/loader.js:776:30)",
@@ -978,7 +978,7 @@
               "new Stage (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-codepipeline/lib/stage.js:25:18)",
               "Pipeline.addStage (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:160:23)",
               "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:129:18)",
-              "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/pipeline.js:102:9)",
+              "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/pipeline.js:103:9)",
               "new PipelineStack (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/index.js:32:9)",
               "Object.<anonymous> (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/index.js:42:1)",
               "Module._compile (internal/modules/cjs/loader.js:776:30)",
@@ -1007,7 +1007,7 @@
               "new Stage (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-codepipeline/lib/stage.js:25:18)",
               "Pipeline.addStage (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:160:23)",
               "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:129:18)",
-              "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/pipeline.js:102:9)",
+              "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/pipeline.js:103:9)",
               "new PipelineStack (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/index.js:32:9)",
               "Object.<anonymous> (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/index.js:42:1)",
               "Module._compile (internal/modules/cjs/loader.js:776:30)",
@@ -1034,7 +1034,7 @@
               "new Stage (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-codepipeline/lib/stage.js:25:18)",
               "Pipeline.addStage (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:160:23)",
               "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:129:18)",
-              "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/pipeline.js:102:9)",
+              "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/pipeline.js:103:9)",
               "new PipelineStack (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/index.js:32:9)",
               "Object.<anonymous> (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/index.js:42:1)",
               "Module._compile (internal/modules/cjs/loader.js:776:30)",
@@ -1063,7 +1063,7 @@
               "new Stage (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-codepipeline/lib/stage.js:25:18)",
               "Pipeline.addStage (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:160:23)",
               "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:129:18)",
-              "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/pipeline.js:102:9)",
+              "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/pipeline.js:103:9)",
               "new PipelineStack (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/index.js:32:9)",
               "Object.<anonymous> (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/index.js:42:1)",
               "Module._compile (internal/modules/cjs/loader.js:776:30)",
@@ -1090,7 +1090,7 @@
               "new Stage (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-codepipeline/lib/stage.js:25:18)",
               "Pipeline.addStage (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:160:23)",
               "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:129:18)",
-              "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/pipeline.js:102:9)",
+              "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/pipeline.js:103:9)",
               "new PipelineStack (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/index.js:32:9)",
               "Object.<anonymous> (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/index.js:42:1)",
               "Module._compile (internal/modules/cjs/loader.js:776:30)",
@@ -1122,7 +1122,7 @@
               "new Stage (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-codepipeline/lib/stage.js:25:18)",
               "Pipeline.addStage (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:160:23)",
               "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:129:18)",
-              "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/pipeline.js:102:9)",
+              "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/pipeline.js:103:9)",
               "new PipelineStack (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/index.js:32:9)",
               "Object.<anonymous> (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/index.js:42:1)",
               "Module._compile (internal/modules/cjs/loader.js:776:30)",
@@ -1151,7 +1151,7 @@
               "new Stage (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-codepipeline/lib/stage.js:25:18)",
               "Pipeline.addStage (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:160:23)",
               "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:129:18)",
-              "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/pipeline.js:102:9)",
+              "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/pipeline.js:103:9)",
               "new PipelineStack (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/index.js:32:9)",
               "Object.<anonymous> (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/index.js:42:1)",
               "Module._compile (internal/modules/cjs/loader.js:776:30)",
@@ -1185,7 +1185,7 @@
               "new Stage (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-codepipeline/lib/stage.js:25:18)",
               "Pipeline.addStage (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:160:23)",
               "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:129:18)",
-              "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/pipeline.js:102:9)",
+              "new Pipeline (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/pipeline.js:103:9)",
               "new PipelineStack (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/index.js:32:9)",
               "Object.<anonymous> (/Users/ricardo/github.com/ricardosllm/example-cicd-github-aws/index.js:42:1)",
               "Module._compile (internal/modules/cjs/loader.js:776:30)",
