@@ -43,18 +43,14 @@ export class Pipeline extends Construct {
             commands: [
               'npm run build',
               './node_modules/.bin/cdk synth -o dist',
-              './node_modules/.bin/cdk deploy MyStaticSite --require-approval never',
-              './node_modules/.bin/cdk deploy PipelineMyStaticSite --require-approval never'
+              './node_modules/.bin/cdk deploy MyStaticSite --require-approval never'
             ],
           },
         },
         artifacts: {
-          // 'base-directory': 'cdk.out',
-          'base-directory': 'dist',
+          'base-directory': 'cdk.out',
           files: [
-            // '*'
-            // props.cfnTemplate,
-            'MyStaticSite.template.json',
+            props.cfnTemplate,
           ],
         },
       }),
@@ -104,14 +100,6 @@ export class Pipeline extends Construct {
       outputs: [siteBuildOutput],
     });
 
-    const deployAction = new codepipeline_actions.CloudFormationCreateUpdateStackAction({
-      actionName: 'Site_CFN_Deploy',
-      templatePath: cdkBuildOutput.atPath('MyStaticSite.template.json'),
-      stackName: 'SiteDeploymentStack',
-      adminPermissions: true,
-      extraInputs: [siteBuildOutput],
-    });
-
     new codepipeline.Pipeline(this, 'Pipeline', {
       stages: [
         {
@@ -120,14 +108,7 @@ export class Pipeline extends Construct {
         },
         {
           stageName: 'Build',
-          actions: [
-            cdkBuildAction,
-            siteBuildAction
-          ],
-        },
-        {
-          stageName: 'Deploy',
-          actions: [ deployAction ],
+          actions: [ cdkBuildAction, siteBuildAction ],
         },
       ],
     });

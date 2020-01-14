@@ -379,4 +379,9 @@ $RECYCLE.BIN/
 cdk.context.json
 package-lock.json
 .cdk.staging
-# cdk.out/*
+cdk.out/*
+
+### JS cdk files
+index.js
+pipeline.js
+static-site.js
