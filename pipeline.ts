@@ -43,7 +43,8 @@ export class Pipeline extends Construct {
             commands: [
               'npm run build',
               './node_modules/.bin/cdk synth -o dist',
-              './node_modules/.bin/cdk deploy MyStaticSite'
+              './node_modules/.bin/cdk deploy MyStaticSite --require-approval never',
+              './node_modules/.bin/cdk deploy PipelineMyStaticSite --require-approval never'
             ],
           },
         },
