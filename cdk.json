@@ -1,7 +1,7 @@
 {
   "app": "node index",
   "context": {
-    "domain": "ginienterprise-dev.com",
-    "subdomain": "test-cdk"
+    "domain": "mystaticsite.com",
+    "subdomain": "www"
   }
 }
