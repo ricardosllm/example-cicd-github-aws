@@ -86,13 +86,18 @@ Here's an example for the trust relationship policy:
 
 ### [optional] Context
 
-Edit [cdk.json](./cdk.json) with your `domain` and `subdomain`
+Edit [cdk.json](./cdk.json) with your `domain` and `subdomain` for simpler 
+`synth` and `deploy` commands
+
+---
 
 ## Build
 
 ```
 npm run build
 ```
+
+---
 
 ## Deploy the Pipeline
 
@@ -101,15 +106,17 @@ npm run build
 ```
 
 > The static site is deployed automatically after a git commit 
+
 > Make sure you trigger the pipeline after the deployment
 
+---
 
 ## Test the Pipeline
 
 Edit [site-contents/index.html](./site-contents/index.html) and commit the changes
 Then go to your subdomain.domain and see the changes deployed. 
 
-> you can see the progress of the pipeline in the AWS Code Pipeline console
+> You can see the progress of the pipeline in the AWS Code Pipeline console
 
 ---
 
